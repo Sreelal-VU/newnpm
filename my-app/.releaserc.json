@@ -1,6 +1,6 @@
   {
     "branches": [
         "master", 
-      { "name": "feature1",  "prerelease" : "poc" }
+      { "name": "feature1",  "prerelease" : "true" }
     ]
   }
