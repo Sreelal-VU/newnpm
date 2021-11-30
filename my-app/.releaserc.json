@@ -1,7 +1,7 @@
   {
     "branches": [
         "master", 
-      { "name": "feature1",  "prerelease" : "true" }
+      { "name": "feature1",  "prerelease" : "merge" }
     ],
     "plugins": [
         "@semantic-release/commit-analyzer",
@@ -10,6 +10,4 @@
         "@semantic-release/git",
         "@semantic-release/github"
     ]
-    
   }
-
