@@ -2,11 +2,5 @@
     "branches": [
         "master", 
       { "name": "feature1",  "prerelease" : "poc" }
-    ],
-  
-    "plugins": [
-        "@semantic-release/commit-analyzer",
-        "@semantic-release/git",
-        "@semantic-release/github"
     ]
   }
