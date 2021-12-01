@@ -1,12 +1,13 @@
   {
     "branches": [
         "master", 
-      { "name": "feature1",  "prerelease" : "pocs" }
+      { "name": "feature1",  "prerelease" : "poc" }
     ],
     "plugins": [
         "@semantic-release/commit-analyzer",
-        "@semantic-release/release-notes-generator"
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
+        "@semantic-release/git",
+        "@semantic-release/github"
     ]
-    
   }
-
