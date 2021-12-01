@@ -2,6 +2,7 @@ version: "1.0"
 # Stages can help you organize your steps in stages
 stages:
   - "clone"
+  #- "build"
   - "generate_version"
   - "test"
 
@@ -9,7 +10,7 @@ steps:
   clone:
     title: "Cloning repository"
     type: "git-clone"
-    repo: "shubhamprataps/hello"
+    repo: "Sreelal-VU/newnpm"
     # Clone the master branch. Or, use ${{CF_BRANCH}} to get branch name from trigger
     # Learn more at https://codefresh.io/docs/docs/codefresh-yaml/variables/
     #revision: "${{CF_BRANCH}}"
@@ -32,7 +33,7 @@ steps:
     stage: generate_version
     image: 'node'
     commands:
-    - cf_export GITHUB_TOKEN="${{HELLOSECRETGIT}}"
+    - cf_export GITHUB_TOKEN="${{version}}"
   
   generate_version:
     title: "Generating semantic release number"
@@ -41,7 +42,6 @@ steps:
     image: 'node'
     working_directory: "${{clone}}"
     commands:
-      - npm install @semantic-release/git @semantic-release/changelog -D
       - npx semantic-release
 
   test:
